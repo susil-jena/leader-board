@@ -1,7 +1,7 @@
-import Activity from '../models/Activity.js';
-import Leaderboard from '../models/Rank.js';
+const Activity = require('../models/Activity.js');
+const Leaderboard = require('../models/Rank.js');
 
-export const recalculateLeaderboard = async () => {
+ const recalculateLeaderboard = async () => {
   const activities = await Activity.find({}).populate('user');
   const userPointMap = {};
 
@@ -40,3 +40,5 @@ export const recalculateLeaderboard = async () => {
 
   console.log('✅ Leaderboard recalculated');
 };
+
+module.exports = recalculateLeaderboard;

@@ -2,7 +2,7 @@ const User = require('../models/User');
 const Activity = require('../models/Activity');
 const Rank = require('../models/Rank');
 const dayjs = require('dayjs');
-const { recalculateLeaderboard } = require('../utils/recalculate');
+const recalculateLeaderboard = require('../utils/recalculate');
 
 const getDateRange = (filter) => {
   const now = dayjs();
